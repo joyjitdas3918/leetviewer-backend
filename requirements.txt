@@ -1,6 +1,4 @@
 fastapi
 uvicorn
 groq
-os
-dotenv
 requests
