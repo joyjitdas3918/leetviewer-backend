@@ -2,9 +2,15 @@ from fastapi import FastAPI
 from groq import Groq
 import requests
 import json
-
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace with the actual origins you want to allow (e.g., ["http://localhost:3000"])
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, PUT, DELETE, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 def get_leetcode_profile_data(username):
   """Fetches user profile data from LeetCode GraphQL API.
 
