@@ -95,12 +95,13 @@ async def rate_profile_endpoint(username: str):
 
     chat_completion = client.chat.completions.create(
         messages=[
-            {"role": "system", "content": "you are a leetcode profile reviewer."},
+            {"role": "system", "content": "you are a leetcode profile reviewer who gives review in beautifully designed html format."},
             {
                 "role": "user",
                 "content": f"""
-                From the following details rate the leetcode profile on a scale of 1 to 10 and also comment on the tags of problems solved and what other tags the user needs to focus on.
+                From the following details rate the leetcode profile on a scale of 1 to 10 and also comment on the tags of problems solved and what other tags or fields the user needs to focus on.
                 {profile_data}
+                The output should be in html format.
                 """,
             },
         ],
