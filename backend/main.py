@@ -29,9 +29,9 @@ def get_leetcode_profile_data(username):
     matchedUser(username: "%s") {
       username
       tagProblemCounts {
-        advanced { tagName }
-        intermediate { tagName }
-        fundamental { tagName }
+        advanced { tagName problemsSolved}
+        intermediate { tagName problemsSolved}
+        fundamental { tagName problemsSolved}
       }
       submitStats: submitStatsGlobal {
         acSubmissionNum {
