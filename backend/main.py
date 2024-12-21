@@ -113,7 +113,8 @@ async def rate_profile_endpoint(username: str):
     )
 
     return {
-        "profile_review": chat_completion.choices[0].message.content
+        "profile_review": chat_completion.choices[0].message.content,
+        "profile_data":profile_data
     }
   else:
     return {"error": "Failed to fetch LeetCode profile data."}, 500
