@@ -101,7 +101,7 @@ async def rate_profile_endpoint(username: str):
                 "content": f"""
                 From the following details rate the leetcode profile on a scale of 1 to 10 and also comment on the tags of problems solved and what other tags or fields the user needs to focus on.
                 {profile_data}
-                The output should be in html format on dark theme.
+                The output should be in responsive html format on dark theme.
                 """,
             },
         ],
